@@ -4,261 +4,272 @@
 
 /* Base HTML and Body Styles */
 html {
-  font-family: 'Shabnam', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  position: relative;
-  height: 100%;
+    font-family: 'Shabnam', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    height: 100%;
 }
 
 body {
-  @apply font-shabnam bg-gray-50;
-  direction: rtl;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.5;
-  position: relative;
-  height: 100%;
+    @apply font-shabnam bg-gray-50;
+    direction: rtl;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    height: 100%;
 }
 
 
 @layer base {
 
-  /* Regular Shabnam */
-  @font-face {
-    font-family: 'Shabnam';
-    src: url('../../public/fonts/Shabnam-FD.woff2') format('woff2'),
-      url('../../public/fonts/Shabnam-FD.woff') format('woff'),
-      url('../../public/fonts/Shabnam-FD.ttf') format('truetype'),
-      url('../../public/fonts/Shabnam-FD.eot') format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+    /* Regular Shabnam */
+    @font-face {
+        font-family: 'Shabnam';
+        src: url('../../public/fonts/Shabnam-FD.woff2') format('woff2'),
+            url('../../public/fonts/Shabnam-FD.woff') format('woff'),
+            url('../../public/fonts/Shabnam-FD.ttf') format('truetype'),
+            url('../../public/fonts/Shabnam-FD.eot') format('embedded-opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
 
-  /* Bold Shabnam */
-  @font-face {
-    font-family: 'Shabnam';
-    src: url('../../public/fonts/Shabnam-Bold-FD.woff2') format('woff2'),
-      url('../../public/fonts/Shabnam-Bold-FD.woff') format('woff'),
-      url('../../public/fonts/Shabnam-Bold-FD.ttf') format('truetype'),
-      url('../../public/fonts/Shabnam-Bold-FD.eot') format('embedded-opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+    /* Bold Shabnam */
+    @font-face {
+        font-family: 'Shabnam';
+        src: url('../../public/fonts/Shabnam-Bold-FD.woff2') format('woff2'),
+            url('../../public/fonts/Shabnam-Bold-FD.woff') format('woff'),
+            url('../../public/fonts/Shabnam-Bold-FD.ttf') format('truetype'),
+            url('../../public/fonts/Shabnam-Bold-FD.eot') format('embedded-opentype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
 
-  /* Light Shabnam */
-  @font-face {
-    font-family: 'Shabnam';
-    src: url('../../public/fonts/Shabnam-Light-FD.woff2') format('woff2'),
-      url('../../public/fonts/Shabnam-Light-FD.woff') format('woff'),
-      url('../../public/fonts/Shabnam-Light-FD.ttf') format('truetype'),
-      url('../../public/fonts/Shabnam-Light-FD.eot') format('embedded-opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
+    /* Light Shabnam */
+    @font-face {
+        font-family: 'Shabnam';
+        src: url('../../public/fonts/Shabnam-Light-FD.woff2') format('woff2'),
+            url('../../public/fonts/Shabnam-Light-FD.woff') format('woff'),
+            url('../../public/fonts/Shabnam-Light-FD.ttf') format('truetype'),
+            url('../../public/fonts/Shabnam-Light-FD.eot') format('embedded-opentype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
 
-  /* Medium Shabnam */
-  @font-face {
-    font-family: 'Shabnam';
-    src: url('../../public/fonts/Shabnam-Medium-FD.woff2') format('woff2'),
-      url('../../public/fonts/Shabnam-Medium-FD.woff') format('woff'),
-      url('../../public/fonts/Shabnam-Medium-FD.ttf') format('truetype'),
-      url('../../public/fonts/Shabnam-Medium-FD.eot') format('embedded-opentype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
+    /* Medium Shabnam */
+    @font-face {
+        font-family: 'Shabnam';
+        src: url('../../public/fonts/Shabnam-Medium-FD.woff2') format('woff2'),
+            url('../../public/fonts/Shabnam-Medium-FD.woff') format('woff'),
+            url('../../public/fonts/Shabnam-Medium-FD.ttf') format('truetype'),
+            url('../../public/fonts/Shabnam-Medium-FD.eot') format('embedded-opentype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
 
-  /* Thin Shabnam */
-  @font-face {
-    font-family: 'Shabnam';
-    src: url('../../public/fonts/Shabnam-Thin-FD.woff2') format('woff2'),
-      url('../../public/fonts/Shabnam-Thin-FD.woff') format('woff'),
-      url('../../public/fonts/Shabnam-Thin-FD.ttf') format('truetype'),
-      url('../../public/fonts/Shabnam-Thin-FD.eot') format('embedded-opentype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-  }
+    /* Thin Shabnam */
+    @font-face {
+        font-family: 'Shabnam';
+        src: url('../../public/fonts/Shabnam-Thin-FD.woff2') format('woff2'),
+            url('../../public/fonts/Shabnam-Thin-FD.woff') format('woff'),
+            url('../../public/fonts/Shabnam-Thin-FD.ttf') format('truetype'),
+            url('../../public/fonts/Shabnam-Thin-FD.eot') format('embedded-opentype');
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+    }
 }
 
-   .footer-link {
-            @apply flex items-center gap-2 transition-colors duration-300 hover:text-yellow-600 dark:hover:text-yellow-400;
-        }
 
-        .footer-link .dot {
-            @apply w-2 h-2 rounded-full border border-gray-400 dark:border-gray-500 transition-colors duration-300;
-        }
+.footer-link {
+    @apply flex items-center gap-2 transition-colors duration-300 hover:text-yellow-600 dark:hover:text-yellow-400;
+}
 
-        .footer-link:hover .dot {
-            @apply border-yellow-600 bg-yellow-600 dark:border-yellow-400 dark:bg-yellow-400;
-        }
+.footer-link .dot {
+    @apply w-2 h-2 rounded-full border border-gray-400 dark:border-gray-500 transition-colors duration-300;
+}
 
-        .swiper-slide img {
-            width: 100%;
-        }
+.footer-link:hover .dot {
+    @apply border-yellow-600 bg-yellow-600 dark:border-yellow-400 dark:bg-yellow-400;
+}
 
-        .swiper-pagination-bullet {
-            background-color: #555 !important;
-            opacity: 1 !important;
-            width: 10px;
-            height: 10px;
-            margin: 0 4px !important;
-            transition: all 0.3s ease;
-        }
+.swiper-slide img {
+    width: 100%;
+}
 
-        .swiper-pagination-bullet-active {
-            background-color: yellow !important;
-            /* emerald-500 */
-            transform: scale(1.2);
-        }
+.swiper-pagination-bullet {
+    background-color: #555 !important;
+    opacity: 1 !important;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px !important;
+    transition: all 0.3s ease;
+}
 
-       /* custom-scroll.css */
-        .custom-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background-color: rgba(234, 179, 8, 0.6);
-            /* زرد */
-            border-radius: 10px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background-color: rgba(234, 179, 8, 0.9);
-        }
-
-        /* اسکرول‌بار سفارشی برای حالت روشن */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1; /* رنگ ترک در حالت روشن */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #a0aec0; /* رنگ اسکرول در حالت روشن */
-            border-radius: 8px;
-            border: 2px solid transparent;
-            background-clip: content-box;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #718096; /* رنگ اسکرول هنگام هاور در حالت روشن */
-        }
-
-          /* استایل‌های دارک مود */
-        /* کلاس dark به body اضافه می‌شود تا این استایل‌ها فعال شوند */
-        .dark {
-            background-color: #070E1C; /* رنگ پس‌زمینه بدنه در دارک مود */
-            color: #e2e8f0; /* رنگ متن کلی در دارک مود */
-        }
-
-        /* اسکرول در حالت دارک مود */
-        .dark ::-webkit-scrollbar-track {
-            background: #2d3748; /* رنگ ترک در دارک مود */
-        }
-
-        .dark ::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* رنگ اسکرول در دارک مود */
-        }
-
-        .dark ::-webkit-scrollbar-thumb:hover {
-            background-color: #718096; /* رنگ اسکرول هنگام هاور در دارک مود */
-        }
-
-
-        /* پس‌زمینه شیشه‌ای مات با هاله رنگی */
-        .glass-review-box {
-            background: rgba(40, 32, 62, 0.35);
-            /* بنفش خیلی تیره و مات */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 1.5rem;
-            border: 1.5px solid rgba(255, 215, 0, 0.3);
-            /* حاشیه طلایی مات */
-            box-shadow:
-                0 4px 20px rgba(255, 215, 0, 0.15),
-                /* هاله نرم طلایی */
-                inset 0 0 15px rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: #E0BBFF;
-            /* رنگ متن بنفش روشن */
-        }
-
-        /* انیمیشن بزرگ شدن و هاله قوی تر هنگام هاور */
-        .glass-review-box:hover {
-            transform: scale(1.04);
-            box-shadow:
-                0 8px 30px rgba(255, 215, 0, 0.5),
-                inset 0 0 25px rgba(255, 215, 0, 0.3);
-            border-color: rgba(255, 215, 0, 0.6);
-        }
-
-        /* عکس پروفایل با حاشیه طلایی */
-        .glass-review-box img {
-            border: 2.5px solid #FFD700;
-            box-shadow: 0 0 8px #FFD700;
-        }
-
-        /* نام مشتری با گرادیانت طلایی */
-        .glass-review-box .name {
-            font-weight: 700;
-            background: linear-gradient(90deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* نقش "مشتری سایت" به رنگ بنفش کم‌رنگ */
-        .glass-review-box .role {
-            color: #cbb7ff;
-            font-size: 0.8rem;
-        }
-
-        /* بخش نظر با پس‌زمینه کمی روشن‌تر و حاشیه گرد */
-        .glass-review-box .comment {
-            background: rgba(255, 215, 0, 0.12);
-            border-radius: 1rem;
-            padding: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #fff6d1;
-            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.2);
-            text-align: right;
-        }
-
-        /* ستاره‌ها رنگ طلایی درخشان */
-        .glass-review-box .stars svg {
-            fill: #FFD700;
-            filter: drop-shadow(0 0 2px #FFA500);
-        }
+.swiper-pagination-bullet-active {
+    background-color: yellow !important;
+    /* emerald-500 */
+    transform: scale(1.2);
+}
 
 
 
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
+/* custom-scroll.css */
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-        .animate-fade-in {
-            animation: fade-in 0.3s ease-out;
-        }
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(234, 179, 8, 0.6);
+    /* زرد */
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(234, 179, 8, 0.9);
+}
+
+/* اسکرول‌بار سفارشی برای حالت روشن */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* رنگ ترک در حالت روشن */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+    /* رنگ اسکرول در حالت روشن */
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #718096;
+    /* رنگ اسکرول هنگام هاور در حالت روشن */
+}
+
+/* استایل‌های دارک مود */
+/* کلاس dark به body اضافه می‌شود تا این استایل‌ها فعال شوند */
+.dark {
+    background-color: #070E1C;
+    /* رنگ پس‌زمینه بدنه در دارک مود */
+    color: #e2e8f0;
+    /* رنگ متن کلی در دارک مود */
+}
+
+/* اسکرول در حالت دارک مود */
+.dark ::-webkit-scrollbar-track {
+    background: #2d3748;
+    /* رنگ ترک در دارک مود */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #4a5568;
+    /* رنگ اسکرول در دارک مود */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #718096;
+    /* رنگ اسکرول هنگام هاور در دارک مود */
+}
+
+
+/* پس‌زمینه شیشه‌ای مات با هاله رنگی */
+.glass-review-box {
+    background: rgba(40, 32, 62, 0.35);
+    /* بنفش خیلی تیره و مات */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    border: 1.5px solid rgba(255, 215, 0, 0.3);
+    /* حاشیه طلایی مات */
+    box-shadow:
+        0 4px 20px rgba(255, 215, 0, 0.15),
+        /* هاله نرم طلایی */
+        inset 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #E0BBFF;
+    /* رنگ متن بنفش روشن */
+}
+
+/* انیمیشن بزرگ شدن و هاله قوی تر هنگام هاور */
+.glass-review-box:hover {
+    transform: scale(1.04);
+    box-shadow:
+        0 8px 30px rgba(255, 215, 0, 0.5),
+        inset 0 0 25px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.6);
+}
+
+/* عکس پروفایل با حاشیه طلایی */
+.glass-review-box img {
+    border: 2.5px solid #FFD700;
+    box-shadow: 0 0 8px #FFD700;
+}
+
+/* نام مشتری با گرادیانت طلایی */
+.glass-review-box .name {
+    font-weight: 700;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* نقش "مشتری سایت" به رنگ بنفش کم‌رنگ */
+.glass-review-box .role {
+    color: #cbb7ff;
+    font-size: 0.8rem;
+}
+
+/* بخش نظر با پس‌زمینه کمی روشن‌تر و حاشیه گرد */
+.glass-review-box .comment {
+    background: rgba(255, 215, 0, 0.12);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #fff6d1;
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.2);
+    text-align: right;
+}
+
+/* ستاره‌ها رنگ طلایی درخشان */
+.glass-review-box .stars svg {
+    fill: #FFD700;
+    filter: drop-shadow(0 0 2px #FFA500);
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+}
