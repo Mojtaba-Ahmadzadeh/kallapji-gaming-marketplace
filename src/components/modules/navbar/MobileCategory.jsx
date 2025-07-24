@@ -3,27 +3,14 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faChevronLeft,
-  faGamepad,
-  faBullhorn,
-  faStore,
-  faUser,
-  faEye,
-  faHeart,
-  faCogs,
-  faSignInAlt,
-  faUserCircle,
-  faShoppingCart,
-  faShieldHalved,
-  faFire,
-  faHatWizard,
-  faCrosshairs,
-  faSkullCrossbones,
-  faArrowRight,
-  faUserSecret,
+  faChevronLeft, faGamepad, faBullhorn, faStore, faUser, faEye,
+  faHeart, faCogs, faSignInAlt, faUserCircle, faShoppingCart,
+  faShieldHalved, faFire, faHatWizard, faCrosshairs,
+  faSkullCrossbones, faArrowRight, faUserSecret
 } from '@fortawesome/free-solid-svg-icons'
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 
+// Menu configuration object
 const menuData = {
   main: [
     { key: 'gamesMenu', icon: faGamepad, iconColor: 'text-orange-400', label: 'محصولات بازی‌' },
@@ -75,7 +62,6 @@ const menuData = {
   ],
 }
 
-
 export default function MobileSidebar({ isOpen, onClose }) {
   const [activeMenu, setActiveMenu] = useState('main')
 
@@ -84,9 +70,25 @@ export default function MobileSidebar({ isOpen, onClose }) {
 
   return (
     <>
-      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} />}
-      <aside className={`fixed top-0 bottom-0 right-0 z-50 w-80 overflow-y-auto bg-white dark:bg-[#1b2138] shadow-2xl p-4 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
-        {/* جستجو */}
+      {/* Overlay background when sidebar is open */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar container */}
+      <aside
+        className={`
+          fixed top-0 bottom-0 right-0 z-50 w-80 overflow-y-auto
+          bg-white dark:bg-[#1b2138] shadow-2xl p-4
+          transform transition-transform duration-300 ease-in-out
+          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+          lg:hidden
+        `}
+      >
+        {/* Search bar */}
         <div className="flex items-center w-full h-16 rounded-[1.7rem] mb-5 bg-white dark:bg-[#1b2138] px-6 shadow-lg shadow-gray-300 dark:shadow-[#111827]/60 transition-all">
           <form className="flex items-center w-full relative">
             <input
@@ -102,22 +104,26 @@ export default function MobileSidebar({ isOpen, onClose }) {
           </form>
         </div>
 
-        {/* منو */}
+        {/* Menu items */}
         <ul className="flex flex-col gap-y-1 p-4 text-gray-900 dark:text-white bg-gray-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-lg animate-fade-in divide-y divide-gray-300 dark:divide-gray-700">
+          {/* Back button if not in main menu */}
           {activeMenu !== 'main' && (
             <li>
-              <button onClick={handleBack} className="flex items-center gap-x-2 text-sm text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white mb-4 transition-all">
+              <button
+                onClick={handleBack}
+                className="flex items-center gap-x-2 text-sm text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white mb-4 transition-all"
+              >
                 <FontAwesomeIcon icon={faArrowRight} className="rotate-180" />
                 بازگشت به منوی اصلی
               </button>
             </li>
           )}
 
+          {/* Render current menu */}
           {currentMenu.map((item, i) => {
             const isSubMenu = item.key && menuData[item.key]
-
             const iconClasses = `w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center shadow-inner`
-            const iconColor = item.iconColor || 'text-indigo-400 dark:text-indigo-300 '
+            const iconColor = item.iconColor || 'text-indigo-400 dark:text-indigo-300'
 
             const content = (
               <div className="flex items-center gap-x-2">
@@ -133,7 +139,8 @@ export default function MobileSidebar({ isOpen, onClose }) {
                 <li key={i} className="py-3 border-b border-gray-300 dark:border-gray-700">
                   <button
                     onClick={() => setActiveMenu(item.key)}
-                    className="flex items-center justify-between w-full">
+                    className="flex items-center justify-between w-full"
+                  >
                     {content}
                     <FontAwesomeIcon icon={faChevronLeft} className="text-gray-400 text-sm" />
                   </button>

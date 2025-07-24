@@ -1,20 +1,21 @@
 'use client';
 
+// Import necessary Swiper modules and styles
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-
-function CODProductSlide() {
+// CODProductSlide component to display Call of Duty products in a Swiper carousel
+function CODProductSlide({ products }) {
     return (
-        <div className="w-full mx-auto py-6">
+        <div className="w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            {/* Swiper slider configuration */}
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={20}
-                slidesPerView={5} // تعداد باکس‌ها در نمای پیش‌فرض
+                slidesPerView={5}
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
                 loop
@@ -22,54 +23,44 @@ function CODProductSlide() {
                     320: { slidesPerView: 1 },
                     640: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 },
-                    1280: { slidesPerView: 5 }, // پنج تایی در دسکتاپ
+                    1280: { slidesPerView: 5 },
                 }}
             >
+                {/* Render each product inside a SwiperSlide */}
                 {products.map((product) => (
                     <SwiperSlide key={product.id}>
-                        <div className='w-full h-full pb-12'>
-                            <div className="group w-full p-4 rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#1A213A] dark:to-[#0f1322] border border-gray-300 dark:border-[#2B3250] shadow-xl hover:scale-[1.015] transition duration-300 ease-in-out cursor-pointer">
-                                <div className="relative">
-                                    <a href="/pages/gameAccountDetails.html" className="block">
-                                        <img
-                                            src={product.image}
-                                            alt={product.title}
-                                            className="w-full h-64 object-cover rounded-2xl" // افزایش ارتفاع
-                                        />
+                        <div className="w-full h-full pb-12">
+                            {/* Product card container */}
+                            <div
+                                role="group"
+                                aria-label={`Slide ${product.id}`}
+                                className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-5 shadow-md hover:shadow-yellow-500/30 transition duration-300"
+                            >
+                                {/* Product image */}
+                                <img
+                                    src={product.image}
+                                    className="rounded-xl w-full h-44 object-cover mb-4"
+                                    alt={product.title}
+                                />
+                                {/* Product title */}
+                                <h3 className="text-gray-800 dark:text-white font-semibold text-lg mb-1">
+                                    {product.title}
+                                </h3>
+                                {/* Product description or fallback */}
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                    {product.description || 'بدون توضیحات'}
+                                </p>
+                                {/* Price and view link section */}
+                                <div className="flex justify-between items-center">
+                                    <span className="text-yellow-600 font-semibold text-sm">
+                                        {product.price}
+                                    </span>
+                                    <a
+                                        href={product.link || '#'}
+                                        className="text-sm text-yellow-500 hover:underline font-medium"
+                                    >
+                                        مشاهده
                                     </a>
-                                    <div className="absolute top-1/2 left-3 -translate-y-1/2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                                        <button className="bg-white/70 dark:bg-[#1b1f33]/70 p-3 rounded-full shadow text-gray-700 dark:text-white hover:text-yellow-500 hover:scale-110 transition duration-300">
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="1.5"
-                                                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                        <button className="bg-white/70 dark:bg-[#1b1f33]/70 p-3 rounded-full shadow text-gray-700 dark:text-white hover:text-emerald-500 hover:scale-110 transition duration-300">
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="1.5"
-                                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-9-3h4"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="pt-4 flex flex-col items-center gap-1 text-center">
-                                    <h3 className="text-gray-800 dark:text-gray-200 text-[18px] lg:text-[16px] font-bold hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                                        {product.title}
-                                    </h3>
-                                    <div className="text-[1.4rem] xl:text-[1.2rem] flex gap-1 text-yellow-500">
-                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                    </div>
-                                    <div className="text-yellow-600 dark:text-yellow-500 font-bold text-[17px] lg:text-[16px]">
-                                        {product.price} <span className="font-Shabnam-Bold-FD">تومان</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +69,6 @@ function CODProductSlide() {
             </Swiper>
         </div>
     );
-};
+}
 
-export default CODProductSlide
+export default CODProductSlide;

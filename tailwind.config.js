@@ -22,6 +22,7 @@ module.exports = {
         shabnam: ['Shabnam', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
         'shabnam-bold': ['Shabnam', 'sans-serif'],
         vazir: ['Vazirmatn', 'sans-serif'],
+         gamer: ['Orbitron', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',

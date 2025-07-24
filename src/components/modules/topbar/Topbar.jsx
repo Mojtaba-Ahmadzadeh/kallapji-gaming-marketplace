@@ -1,4 +1,5 @@
 'use client'
+
 import LogoAndTitle from './LogoAndTitle'
 import SearchBar from './SearchBar'
 import ThemeToggle from './ThemeToggle'
@@ -9,7 +10,7 @@ import ShoppingCartIcon from './ShoppingCartIcon'
 function Topbar({ onHamburgerClick }) {
     return (
         <div className="flex items-center justify-between container px-4 xl:px-0 m-auto lg:m-0 pt-[1rem]">
-            {/* آیکن همبرگر فقط در موبایل */}
+            {/* Hamburger icon - visible only on mobile */}
             <div
                 onClick={onHamburgerClick}
                 className="lg:hidden text-black dark:text-white hover:text-blue-400 transition-colors duration-300 cursor-pointer"
@@ -26,13 +27,13 @@ function Topbar({ onHamburgerClick }) {
                 </svg>
             </div>
 
-            {/* لوگو و سرچ */}
+            {/* Logo and Search bar */}
             <div className="flex items-center gap-x-8">
                 <LogoAndTitle />
                 <SearchBar />
             </div>
 
-            {/* آیکن‌ها سمت چپ */}
+            {/* Icons on the right side */}
             <div className="flex gap-x-2 xl:gap-x-5 items-center">
                 <ThemeToggle />
                 <FavoriteIcon />
