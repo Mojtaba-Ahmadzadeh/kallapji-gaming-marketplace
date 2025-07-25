@@ -23,6 +23,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faTelegram, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 function DesktopCategory() {
     return (
@@ -223,24 +224,24 @@ function DesktopCategory() {
                 <ul className="hidden lg:flex flex-wrap gap-x-7 items-center">
                     {/* Example: PUBG */}
                     <li>
-                        <a
-                            href="/pages/pubg.html"
+                        <Link
+                            href="/pubg"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 transition"
                         >
                             <FontAwesomeIcon icon={faCrosshairs} className="text-yellow-400 w-4 h-4" />
                             <span>پابجی</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="/pages/giftCard.html" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-pink-500 dark:hover:text-pink-400 transition">
+                        <a href="/giftCard" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-pink-500 dark:hover:text-pink-400 transition">
                             <FontAwesomeIcon icon={faGift} className="text-pink-400 w-4 h-4" />
                             <span>گیفت کارت</span>
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="/pages/telegram-products.html"
+                        <Link
+                            href="/telegram"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white dark:hover:text-[#0088cc] hover:text-[#0088cc] transition group"
                         >
                             <FontAwesomeIcon
@@ -248,12 +249,12 @@ function DesktopCategory() {
                                 className="text-[#0088cc] w-4 h-4"
                             />
                             <span>محصولات تلگرام</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a
-                            href="/pages/callofDuty.html"
+                        <Link
+                            href="/callofduty"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-red-600 dark:hover:text-red-500 transition group"
                         >
                             <FontAwesomeIcon
@@ -261,11 +262,11 @@ function DesktopCategory() {
                                 className="text-red-500 transition group-hover:text-red-600 dark:group-hover:text-red-500 w-4 h-4"// ← اینجا سایز واقعی SVG
                             />
                             <span>کالاف دیوتی</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="/pages/ClashOfClans.html" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition">
+                        <a href="/clashofclans" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition">
                             <FontAwesomeIcon icon={faShieldHalved} className="text-red-500 w-4 h-4" />
                             <span>کلش آف کلنز</span>
                         </a>
@@ -274,33 +275,33 @@ function DesktopCategory() {
                     {/* Dropdown: Contact Us */}
                     <li className="relative group">
                         {/* Contact Us button with sub-menu */}
-                        <a href="#" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-blue-400 transition">
+                        <Link href="javascript:void(0)" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-blue-400 transition">
                             <FontAwesomeIcon icon={faEnvelope} className="text-blue-400 w-4 h-4" />
                             <span>ارتباط با ما</span>
                             <FontAwesomeIcon icon={faChevronDown} className="text-sm text-gray-500 dark:text-gray-300 w-3 h-3" />
-                        </a>
+                        </Link>
                         <div className="absolute top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-100/70 dark:bg-gradient-to-br dark:from-[#0d0d0d] dark:via-[#2b2b2b]/80 dark:to-[#facc15]/25 p-5 rounded-lg w-56 z-50 transition-all text-slate-900 dark:text-white shadow-lg dark:shadow-[0_4px_30px_rgba(250,204,21,0.4)] backdrop-blur-lg ring-1 ring-yellow-400/40 dark:ring-yellow-500/40 border border-yellow-300/30 dark:border-yellow-400/10">
                             <ul className="text-sm space-y-3 font-gamer">
                                 <li>
-                                    <a href="/pages/contact.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/contact-us" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faPhone} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>تماس با ما</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/pages/rules.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <a href="/terms-and-conditions" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faGavel} className=" text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>قوانین و مقررات</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/pages/questions.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <a href="/questions" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faQuestionCircle} className=" text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>سوالات متدوال</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/pages/about.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <a href="/about-us" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faUsers} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>درباره ما</span>
                                     </a>
@@ -311,10 +312,10 @@ function DesktopCategory() {
 
                     {/* Login/Signup */}
                     <li>
-                        <a href="/pages/login.html" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-green-500 dark:hover:text-green-400 transition">
+                        <Link href="/login-register" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-green-500 dark:hover:text-green-400 transition">
                             <FontAwesomeIcon icon={faSignInAlt} className="text-green-400 w-4 h-4" />
                             <span>ورود / عضویت</span>
-                        </a>
+                        </Link>
                     </li>
 
                     {/* User Account dropdown */}
