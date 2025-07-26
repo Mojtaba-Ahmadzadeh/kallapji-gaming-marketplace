@@ -337,34 +337,34 @@ function DesktopCategory() {
 
                             <ul className="text-sm space-y-3 font-gamer">
                                 <li>
-                                    <a href="/account/dashboard" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/account/dashboard" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faGauge} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>پیشخوان</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/pages/orders.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/account/user-products" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faShoppingCart} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>سفارشات</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/pages/tickets.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/account/tickets" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faTicketAlt} className="fas fa-ticket-alt text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>تیکت‌ها</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/pages/registered-comments.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/account/user-comments" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faComments} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>کامنت‌ها</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/pages/favorites.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <Link href="/account/favorites" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faHeart} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>علاقه‌مندی‌ها</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
