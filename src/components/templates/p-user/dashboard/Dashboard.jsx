@@ -56,7 +56,6 @@ function Dashboard() {
                         </div>
                     </section>
 
-
                     <section className="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-lg p-6 space-y-6 max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800">
                         <h2 className="text-lg font-semibold border-b border-gray-300 dark:border-gray-600 pb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
                             <i className="fa-solid fa-user-pen text-yellow-400"></i>

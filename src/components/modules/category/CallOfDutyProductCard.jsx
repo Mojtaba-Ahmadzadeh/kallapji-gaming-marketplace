@@ -26,7 +26,7 @@ function CallOfDutyProductCard() {
                                         hover:text-yellow-400 hover:scale-110 
                                         transition duration-300">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"></path>
+                            <path strokeLinecap="round" strokeLinejoinround" strokeWidth="1.5" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"></path>
                         </svg>
                     </button>
                     <button className="bg-white/80 dark:bg-[#1b1f33]/70 p-3 rounded-full shadow 
@@ -34,7 +34,7 @@ function CallOfDutyProductCard() {
                                         hover:text-emerald-400 hover:scale-110 
                                         transition duration-300">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-9-3h4"></path>
+                            <path strokeLinecap="round" strokeLinejoinround" strokeWidth="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-9-3h4"></path>
                         </svg>
                     </button>
                 </div>

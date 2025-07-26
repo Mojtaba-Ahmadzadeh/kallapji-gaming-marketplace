@@ -35,8 +35,8 @@ function Questions() {
                     چطور اکانتم رو برای فروش ثبت کنم؟
                 </span>
                 
-                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoinround" d="M19 9l-7 7-7-7"></path>
                 </svg>
                 </button>
 
@@ -55,8 +55,8 @@ function Questions() {
                 آیا خرید و فروش اکانت قانونی است؟
                 </span>
                 
-                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoinround" d="M19 9l-7 7-7-7"></path>
                 </svg>
                 </button>
 
@@ -75,8 +75,8 @@ function Questions() {
                     چه زمانی مبلغ فروش واریز می‌شود؟
                 </span>
                 
-                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoinround" d="M19 9l-7 7-7-7"></path>
                 </svg>
                 </button>
 
@@ -95,8 +95,8 @@ function Questions() {
                     &gt;در صورت پس گرفتن اکانت چه می‌شود؟
                 </span>
                 
-                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-300 transition-transform transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoinround" d="M19 9l-7 7-7-7"></path>
                 </svg>
                 </button>
 

@@ -9,6 +9,7 @@ import {
     faRightFromBracket
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 
 function SidebarUser() {
@@ -20,42 +21,42 @@ function SidebarUser() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">سطح: طلایی</p>
             </div>
             <nav className="space-y-4">
-                <a href="#" className="flex items-center gap-3 p-2 rounded bg-gray-200 dark:bg-gray-700 transition ">
+                <Link href="#" className="flex items-center gap-3 p-2 rounded bg-gray-200 dark:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faHome} className="w-5 h-5 text-yellow-400" />
                     <span>خانه</span>
-                </a>
-                <a href="./orders.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
+                </Link>
+                <Link href="/account/user-products" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faBoxesStacked} className="w-5 h-5 text-yellow-400" />
                     <span>محصولات من</span>
-                </a>
-                <a href="./registered-comments.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
+                </Link>
+                <Link href="/account/registered-comments" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faComments} className="w-5 h-5 text-yellow-400" />
                     <span>نظرات ثبت شده</span>
-                </a>
+                </Link>
                 <a href="./registered-comments.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faChartLine} className="w-h h-5 text-yellow-400" />
                     <span>کامنت های من</span>
                 </a>
-                <a href="./my-ads.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
+                <Link href="/account/my-listings" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faBullhorn} className="w-h h-5 text-yellow-400" />
                     <span>آگهی های من</span>
-                </a>
-                <a href="./store.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                </Link>
+                <Link href="./store.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
                     <FontAwesomeIcon icon={faCreditCard} className=" w-5 h-5 text-yellow-400" />
                     <span>فروشگاه</span>
-                </a>
-                <a href="./all-accounts.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                </Link>
+                <Link href="./all-accounts.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
                     <FontAwesomeIcon icon={faGamepad} className="w-5 h-5 text-yellow-400" />
                     <span>فروش اکانت</span>
-                </a>
-                <a href="/account/tickets" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                </Link>
+                <Link href="/account/tickets" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
                     <FontAwesomeIcon icon={faTicket} className="w-5 h-5 text-yellow-400" />
                     <span>تیکت‌ها</span>
-                </a>
-                <a href="#" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                </Link>
+                <Link href="#" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
                     <FontAwesomeIcon icon={faRightFromBracket} className="w-5 h-5 text-red-600" />
                     <span>خروج از حساب</span>
-                </a>
+                </Link>
             </nav>
         </aside>
     )

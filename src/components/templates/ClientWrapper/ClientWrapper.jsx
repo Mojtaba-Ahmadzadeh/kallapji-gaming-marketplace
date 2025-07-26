@@ -14,6 +14,8 @@ export default function ClientWrapper({ children }) {
     '/account/tickets',
     '/account/tickets/newTicket',
     '/account/orders',
+    '/account/user-products',
+    '/account/my-listings',
     '/account/favorites',
     '/account/comments'
   ];

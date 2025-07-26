@@ -35,8 +35,8 @@ function TermsAndConditions() {
 
                 <section id="acceptance">
                     <h3 className="text-2xl font-bold mb-3 text-yellow-500 flex items-center gap-3">
-                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoinround" d="M5 13l4 4L19 7"></path>
                         </svg>
                         ۱. پذیرش قوانین
                     </h3>
@@ -47,8 +47,8 @@ function TermsAndConditions() {
 
                 <section id="privacy">
                     <h3 className="text-2xl font-bold mb-3 text-yellow-500 flex items-center gap-3">
-                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 .27.1.53.29.72l5.59 5.59a2 2 0 01-2.83 2.83l-5.6-5.6a.996.996 0 010-1.41L15.87 7.4c.39-.39 1.02-.39 1.41 0z"></path>
+                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoinround" d="M12 11c0 .27.1.53.29.72l5.59 5.59a2 2 0 01-2.83 2.83l-5.6-5.6a.996.996 0 010-1.41L15.87 7.4c.39-.39 1.02-.39 1.41 0z"></path>
                         </svg>
                         ۲. حریم خصوصی کاربران
                     </h3>
@@ -60,9 +60,9 @@ function TermsAndConditions() {
 
                 <section id="responsibility">
                     <h3 className="text-2xl font-bold mb-3 text-yellow-500 flex items-center gap-3">
-                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6a3 3 0 016 0v6"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-2"></path>
+                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoinround" d="M9 17v-6a3 3 0 016 0v6"></path>
+                            <path strokeLinecap="round" strokeLinejoinround" d="M12 21v-2"></path>
                         </svg>
                         ۳. مسئولیت محتوا
                     </h3>
@@ -74,9 +74,9 @@ function TermsAndConditions() {
 
                 <section id="changes">
                     <h3 className="text-2xl font-bold mb-3 text-yellow-500 flex items-center gap-3">
-                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7v4l3 3"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 20a8 8 0 10-8-8"></path>
+                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoinround" d="M8 7v4l3 3"></path>
+                            <path strokeLinecap="round" strokeLinejoinround" d="M12 20a8 8 0 10-8-8"></path>
                         </svg>
                         ۴. تغییرات در قوانین
                     </h3>
@@ -88,9 +88,9 @@ function TermsAndConditions() {
 
                 <section id="terms">
                     <h3 className="text-2xl font-bold mb-3 text-yellow-500 flex items-center gap-3">
-                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 17v4"></path>
+                        <svg className="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoinround" d="M16 11V7a4 4 0 00-8 0v4"></path>
+                            <path strokeLinecap="round" strokeLinejoinround" d="M12 17v4"></path>
                         </svg>
                         ۵. شرایط خرید و فروش
                     </h3>
