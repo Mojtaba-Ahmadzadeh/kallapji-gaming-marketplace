@@ -6,13 +6,25 @@ import Footer from '@/components/modules/footer/Footer';
 
 export default function ClientWrapper({ children }) {
   const pathname = usePathname();
-  const showNavFooter = !pathname.startsWith('/login-register');
+
+  // مسیرهایی که نباید Navbar و Footer داشته باشند
+  const noLayoutRoutes = [
+    '/login-register',
+    '/account/dashboard',
+    '/account/tickets',
+    '/account/tickets/newTicket',
+    '/account/orders',
+    '/account/favorites',
+    '/account/comments'
+  ];
+
+  const hideLayout = noLayoutRoutes.some((route) => pathname.startsWith(route));
 
   return (
     <>
-      {showNavFooter && <Navbar />}
+      {!hideLayout && <Navbar />}
       <main>{children}</main>
-      {showNavFooter && <Footer />}
+      {!hideLayout && <Footer />}
     </>
   );
 }

@@ -337,7 +337,7 @@ function DesktopCategory() {
 
                             <ul className="text-sm space-y-3 font-gamer">
                                 <li>
-                                    <a href="/pages/p-user.html" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
+                                    <a href="/account/dashboard" className="flex items-center gap-x-2 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200">
                                         <FontAwesomeIcon icon={faGauge} className="text-slate-800 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition duration-200 w-4 h-4" />
                                         <span>پیشخوان</span>
                                     </a>
