@@ -15,6 +15,7 @@ export default function ClientWrapper({ children }) {
     '/account/tickets/newTicket',
     '/account/orders',
     '/account/user-products',
+    '/account/user-comments',
     '/account/my-listings',
     '/account/favorites',
     '/account/comments'
@@ -24,7 +25,11 @@ export default function ClientWrapper({ children }) {
 
   return (
     <>
-      {!hideLayout && <Navbar />}
+      {!hideLayout && (
+        <header className='container max-w-screen-2xl'>
+          <Navbar />
+        </header>
+      )}
       <main>{children}</main>
       {!hideLayout && <Footer />}
     </>

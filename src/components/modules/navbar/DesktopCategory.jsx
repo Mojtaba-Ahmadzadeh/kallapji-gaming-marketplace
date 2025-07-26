@@ -320,7 +320,7 @@ function DesktopCategory() {
 
                     {/* User Account dropdown */}
                     <li className="relative group">
-                        <a href="#" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-cyan-500 dark:hover:text-cyan-400 transition">
+                        <a href="javascript:void(0)" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-cyan-500 dark:hover:text-cyan-400 transition">
                             <FontAwesomeIcon icon={faUserCircle} className="text-cyan-400 w-4 h-4" />
                             <span>حساب کاربری</span>
                             <FontAwesomeIcon icon={faChevronDown} className="text-sm text-gray-500 dark:text-gray-300 w-3 h-3" />
@@ -372,6 +372,7 @@ function DesktopCategory() {
 
                 </ul>
             </div>
+
         </>
     )
 }

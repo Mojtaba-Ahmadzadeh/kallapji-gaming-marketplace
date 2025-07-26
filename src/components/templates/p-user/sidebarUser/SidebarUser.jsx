@@ -29,14 +29,10 @@ function SidebarUser() {
                     <FontAwesomeIcon icon={faBoxesStacked} className="w-5 h-5 text-yellow-400" />
                     <span>محصولات من</span>
                 </Link>
-                <Link href="/account/registered-comments" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
+                <Link href="/account/user-comments" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faComments} className="w-5 h-5 text-yellow-400" />
                     <span>نظرات ثبت شده</span>
                 </Link>
-                <a href="./registered-comments.html" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
-                    <FontAwesomeIcon icon={faChartLine} className="w-h h-5 text-yellow-400" />
-                    <span>کامنت های من</span>
-                </a>
                 <Link href="/account/my-listings" className="flex items-center gap-3 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition ">
                     <FontAwesomeIcon icon={faBullhorn} className="w-h h-5 text-yellow-400" />
                     <span>آگهی های من</span>
