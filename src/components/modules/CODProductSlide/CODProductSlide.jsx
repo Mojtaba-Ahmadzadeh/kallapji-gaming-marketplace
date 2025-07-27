@@ -5,58 +5,60 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 // Sample product data
 const products = [
     {
         id: 1,
+        slug: 'vip-880cp-account',
         title: '۸۸۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۷۵۹,۰۰۰',
     },
     {
         id: 2,
-        title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'vip-1300cp-account',
+        title: '۱۳۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
+        price: '۱,۰۵۰,۰۰۰',
     },
     {
         id: 3,
-        title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'vip-2400cp-account',
+        title: '۲۴۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
+        price: '۱,۸۵۰,۰۰۰',
     },
     {
         id: 4,
-        title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'vip-2400cp-account',
+        title: '۲۴۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
-    },
-    {
-        id: 5,
-        title: '۸۸۰ سی پی کالاف دیوتی',
-        image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
+        price: '۱,۸۵۰,۰۰۰',
     },
     {
         id: 6,
-        title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'vip-2400cp-account',
+        title: '۲۴۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
+        price: '۱,۸۵۰,۰۰۰',
     },
     {
         id: 7,
-        title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'vip-2400cp-account',
+        title: '۲۴۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۷۵۹,۰۰۰',
+        price: '۱,۸۵۰,۰۰۰',
     },
-    // ... other products
+    // ... سایر محصولات
 ];
 
-function CODProductSlide() {
+
+function CODProductSlide({product}) {
     return (
         // Wrapper container for the swiper with padding and centered width
-        <div className="w-full mx-auto py-6">
+        <div className="w-full mx-auto">
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={20}
@@ -78,13 +80,13 @@ function CODProductSlide() {
                             <div className="group w-full p-4 rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#1A213A] dark:to-[#0f1322] border border-gray-300 dark:border-[#2B3250] shadow-xl hover:scale-[1.015] transition duration-300 ease-in-out cursor-pointer">
                                 <div className="relative">
                                     {/* Product image wrapped in a link */}
-                                    <a href="/pages/gameAccountDetails.html" className="block">
+                                    <Link href={`/callofduty/${product.slug}`} className="block">
                                         <img
                                             src={product.image}
                                             alt={product.title}
                                             className="w-full h-64 object-cover rounded-2xl" // Fixed height and rounded corners
                                         />
-                                    </a>
+                                    </Link>
 
                                     {/* Hover buttons: like (heart) and add to cart */}
                                     <div className="absolute top-1/2 left-3 -translate-y-1/2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">

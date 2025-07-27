@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-function PubgProductCard() {
+function PubgProductCard({ product }) {
     return (
         <div
             className="
@@ -13,7 +14,7 @@ function PubgProductCard() {
         >
             {/* Image section */}
             <div className="relative h-[60%] overflow-hidden">
-                <a href="/pages/pubgUcِDetails.html" className="block overflow-hidden rounded-2xl shadow-lg">
+                <Link href={`/pubg/${product.slug}`} className="block overflow-hidden rounded-2xl shadow-lg">
                     <img
                         src="../images/Gemini_Generated_Image_rp0wemrp0wemrp0w.jpeg"
                         alt="یوسی پابجی 3850 عددی"
@@ -22,7 +23,7 @@ function PubgProductCard() {
           transition-transform duration-500 group-hover:scale-105
         "
                     />
-                </a>
+                </Link>
 
                 {/* Badge label */}
                 <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">

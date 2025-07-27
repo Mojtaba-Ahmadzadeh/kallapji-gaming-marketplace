@@ -1,6 +1,38 @@
 import PubgProductCard from '@/components/modules/PubgProductCard/PubgProductCard'
 import React from 'react'
 
+const products = [
+  {
+    slug: 'pubg-uc-660',
+    title: 'اکانت ویژه 880CP کالاف دیوتی',
+    description: 'فعال‌سازی سریع + ضمانت اصالت',
+    price: 759000,
+    image: '/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg',
+  },
+  {
+    slug: 'pubg-uc-660',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
+  },
+  {
+    slug: 'legendary-1300cp',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
+  },
+  {
+    slug: 'legendary-1300cp',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
+  },
+  // ... سایر محصولات
+];
+
 function PubgProductSection() {
     return (
         // Section container with top margin
@@ -31,10 +63,11 @@ function PubgProductSection() {
 
             {/* Grid container for product cards with responsive columns */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
-                <PubgProductCard />
-                <PubgProductCard />
-                <PubgProductCard />
-                <PubgProductCard />
+                {
+                    products.map((product, index) => (
+                        <PubgProductCard key={index} product={product} />
+                    ))
+                }
             </div>
 
         </div>

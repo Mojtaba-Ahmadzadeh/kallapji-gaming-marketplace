@@ -1,4 +1,4 @@
-import CallOfDutyProducts from '@/components/templates/callofduty/CallOfDutyProducts'
+import CallOfDutyProducts from '@/components/templates/callOfDutyProducts/CallOfDutyProducts'
 import React from 'react'
 
 function page() {

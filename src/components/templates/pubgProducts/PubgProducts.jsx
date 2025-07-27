@@ -5,11 +5,25 @@ import React, { useEffect } from 'react'
 
 const products = [
   {
-    slug: 'vip-880cp-account',
+    slug: 'pubg-uc-660',
     title: 'اکانت ویژه 880CP کالاف دیوتی',
     description: 'فعال‌سازی سریع + ضمانت اصالت',
     price: 759000,
     image: '/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg',
+  },
+  {
+    slug: 'legendary-1300cp',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
+  },
+  {
+    slug: 'legendary-1300cp',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
   },
   {
     slug: 'legendary-1300cp',
