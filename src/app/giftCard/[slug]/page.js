@@ -5,28 +5,45 @@ import { notFound } from 'next/navigation';
 import CommentsSection from '@/components/modules/commentsSection/CommentsSection';
 
 const mockProducts = {
-    'vip-880cp-account': {
-        name: 'اکانت VIP 880CP PUBG',
-        price: 'قیمت 100,000',
-        oldPrice: 'قیمت قبلی',
-        description: 'توضیحات اکانت VIP 880CP در بازی PUBG',
-        image: '/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg',
+    'google-play-10usd': {
+        name: 'گیفت کارت 10 دلاری گوگل پلی',
+        price: '320,000 تومان',
+        oldPrice: '350,000 تومان',
+        description: 'مناسب برای خرید اپلیکیشن‌ها، بازی‌ها و پرداخت درون‌برنامه‌ای در Google Play.',
+        image: '/images/Gemini_Generated_Image_b4oxq0b4oxq0b4ox.png',
     },
 
-    'legendary-1300cp': {
-        name: 'اکانت VIP 880CP PUBG',
-        price: 'قیمت دلخواه',
-        oldPrice: 'قیمت قبلی',
-        description: 'توضیحات اکانت VIP 880CP در بازی PUBG',
-        image: '/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg',
+    'itunes-15usd': {
+        name: 'گیفت کارت 15 دلاری آیتونز',
+        price: '470,000 تومان',
+        oldPrice: '490,000 تومان',
+        description: 'قابل استفاده برای خرید موزیک، فیلم، اپلیکیشن و سرویس‌های اپل.',
+        image: '/images/Gemini_Generated_Image_b4oxq0b4oxq0b4ox.png',
+    },
+
+    'playstation-20usd': {
+        name: 'گیفت کارت 20 دلاری پلی‌استیشن',
+        price: '620,000 تومان',
+        oldPrice: '650,000 تومان',
+        description: 'برای خرید بازی، DLC و اشتراک Plus در فروشگاه پلی‌استیشن.',
+        image: '/images/Gemini_Generated_Image_b4oxq0b4oxq0b4ox.png',
+    },
+
+    'xbox-25usd': {
+        name: 'گیفت کارت 25 دلاری ایکس‌باکس',
+        price: '780,000 تومان',
+        oldPrice: '800,000 تومان',
+        description: 'برای خرید بازی‌ها، سرویس‌ها و اشتراک Xbox Game Pass.',
+        image: '/images/Gemini_Generated_Image_b4oxq0b4oxq0b4ox.png',
     },
 };
+
 
 
 function ProductDetails({ params }) {
 
     const { slug } = use(params)
-    const product = mockProducts[slug]; 
+    const product = mockProducts[slug];
 
     const [value, setValue] = useState(1)
 
@@ -42,8 +59,6 @@ function ProductDetails({ params }) {
         const val = Number(e.target.value)
         if (val >= 1) setValue(val)
     }
-
-
 
     if (!product) return notFound()
 

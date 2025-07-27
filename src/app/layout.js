@@ -1,6 +1,4 @@
 import './globals.css';
-import Navbar from '@/components/modules/navbar/Navbar';
-import Footer from '@/components/modules/footer/Footer';
 import ClientWrapper from '@/components/templates/ClientWrapper/ClientWrapper';
 
 export const metadata = {
@@ -13,6 +11,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="fa" dir="rtl">
       <head>

@@ -3,6 +3,39 @@ import FiltersAside from '@/components/modules/category/FilterAside'
 import GiftCardProductCard from '@/components/modules/category/GiftCardProductCard'
 import React, { useEffect } from 'react'
 
+
+const products = [
+    {
+        slug: 'google-play-10usd',
+        title: 'گیفت کارت 10 دلاری گوگل پلی',
+        description: 'قابل استفاده در Google Play برای خرید بازی، برنامه و آیتم‌های درون‌برنامه‌ای',
+        price: 320000,
+        image: '/images/giftcards/google-play-10usd.jpg',
+    },
+    {
+        slug: 'itunes-15usd',
+        title: 'گیفت کارت 15 دلاری اپل (آیتونز)',
+        description: 'مناسب برای خرید موزیک، فیلم و اپلیکیشن از فروشگاه Apple',
+        price: 470000,
+        image: '/images/giftcards/itunes-15usd.jpg',
+    },
+    {
+        slug: 'playstation-20usd',
+        title: 'گیفت کارت 20 دلاری پلی‌استیشن',
+        description: 'برای خرید بازی و محتوا در PlayStation Store',
+        price: 620000,
+        image: '/images/giftcards/playstation-20usd.jpg',
+    },
+    {
+        slug: 'xbox-25usd',
+        title: 'گیفت کارت 25 دلاری ایکس‌باکس',
+        description: 'مناسب برای Game Pass، بازی و سرویس‌های ایکس‌باکس',
+        price: 780000,
+        image: '/images/giftcards/xbox-25usd.jpg',
+    },
+];
+
+
 function GiftCardProducts() {
 
     useEffect(() => {
@@ -79,12 +112,11 @@ function GiftCardProducts() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-3 gap-3">
-                    <GiftCardProductCard/>
-                    <GiftCardProductCard/>
-                    <GiftCardProductCard/>
-                    <GiftCardProductCard/>
-                    <GiftCardProductCard/>
-                    <GiftCardProductCard/>
+                    {
+                        products.map((product, index)=> (
+                            <GiftCardProductCard key={index} product={product}/>
+                        ))
+                    }
                 </div>
             </div>
         </section>
