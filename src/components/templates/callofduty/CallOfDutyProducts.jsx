@@ -1,8 +1,39 @@
 "use client"
 import CallOfDutyProductCard from '@/components/modules/category/CallOfDutyProductCard'
 import FiltersAside from '@/components/modules/category/FilterAside'
-import TelegramProductCard from '@/components/modules/category/TelegramProductCard'
 import React, { useEffect } from 'react'
+
+const products = [
+  {
+    slug: 'cod-880cp-account',
+    title: 'اکانت ویژه 880CP کالاف دیوتی',
+    description: 'فعال‌سازی سریع + ضمانت اصالت',
+    price: 759000,
+    image: '/images/cod-880cp.png',
+  },
+  {
+    slug: 'cod-1300cp-legendary',
+    title: 'اکانت لجندری 1300CP کالاف دیوتی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/cod-1300cp.png',
+  },
+  {
+    slug: 'cod-battle-pass-premium',
+    title: 'بتل پس پریمیوم کالاف دیوتی',
+    description: 'دسترسی به جوایز فصل جدید + XP بوستر',
+    price: 340000,
+    image: '/images/cod-battle-pass.png',
+  },
+  {
+    slug: 'cod-rare-skin-account',
+    title: 'اکانت نایاب با اسکین لجندری کالاف دیوتی',
+    description: 'اکانت کمیاب + اسکین‌های حرفه‌ای + امنیت تضمینی',
+    price: 2900000,
+    image: '/images/cod-rare-account.png',
+  },
+];
+
 
 function CallOfDutyProducts() {
 
@@ -80,11 +111,11 @@ function CallOfDutyProducts() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-3 gap-3">
-                    <CallOfDutyProductCard />
-                    <CallOfDutyProductCard />
-                    <CallOfDutyProductCard />
-                    <CallOfDutyProductCard />
-                    <CallOfDutyProductCard />
+                    {
+                        products.map((product, index) => (
+                            <CallOfDutyProductCard key={index} product={product} />
+                        ))
+                    }
                 </div>
             </div>
         </section>
