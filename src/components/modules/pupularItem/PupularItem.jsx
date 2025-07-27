@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-function PopularItem() {
+function PopularItem({ product }) {
     return (
         <div
             className="
@@ -17,9 +18,9 @@ function PopularItem() {
         >
             {/* Product image */}
             <div className="relative rounded-2xl overflow-hidden border border-gray-300 dark:border-[#1f2a58] shadow-inner">
-                <a href="/pages/gameAccountDetails.html" className="block h-[13rem]">
+                <Link href={`pupular/${product.slug}`} className="block h-[13rem]">
                     <img
-                        src="../images/Gemini_Generated_Image_qt55nzqt55nzqt55.jpeg"
+                        src="/images/Gemini_Generated_Image_qt55nzqt55nzqt55.jpeg"
                         alt="Product"
                         className="
                             w-full h-full object-cover rounded-2xl
@@ -27,7 +28,7 @@ function PopularItem() {
                             group-hover:scale-105 group-hover:brightness-110
                         "
                     />
-                </a>
+                </Link>
 
                 {/* Hover Action Buttons */}
                 <div className="absolute top-1/2 left-3 -translate-y-1/2 flex flex-col gap-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

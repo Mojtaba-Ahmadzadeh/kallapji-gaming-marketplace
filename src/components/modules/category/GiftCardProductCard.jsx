@@ -10,7 +10,7 @@ function GiftCardProductCard({ product }) {
                                 transition duration-300 ease-in-out cursor-pointer">
 
             <div className="relative overflow-hidden rounded-2xl">
-                <Link href={`/giftCard/${product.slug}`} className="block relative">
+                <Link href={`/category/giftcard/${product.slug}`} className="block relative">
                     <img src="/images/Gemini_Generated_Image_b4oxq0b4oxq0b4ox.png" alt="اکانت کالاف دیوتی" className="w-full h-auto rounded-2xl object-cover 
                                         transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
                                         group-hover:scale-105" />

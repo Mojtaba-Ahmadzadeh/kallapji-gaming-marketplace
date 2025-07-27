@@ -1,6 +1,50 @@
 import PupularItem from '@/components/modules/pupularItem/PupularItem'
 import React from 'react'
 
+const products = [
+{
+slug: 'vip-880cp-account',
+    name: 'CP 880 کالاف دیوتی',
+    price: '759,000 تومان',
+    oldPrice: '820,000 تومان',
+    description: 'مناسب برای خرید آیتم‌ها، اسکین‌ها و Battle Pass در بازی Call of Duty Mobile.',
+    image: '/images/Gemini_Generated_Image_qt55nzqt55nzqt55.jpeg',
+  },
+  {
+    slug: 'vip-1300cp-account',
+    name: 'CP 1300 کالاف دیوتی',
+    price: '1,150,000 تومان',
+    oldPrice: '1,220,000 تومان',
+    description: 'خرید CP جهت ارتقاء سطح بازی و استفاده از امکانات پریمیوم.',
+    image: '/images/Gemini_Generated_Image_f08nbsf08nbsf08n.jpeg',
+  },
+  {
+    slug: 'battle-pass-premium',
+    name: 'بتل پس پریمیوم کالاف دیوتی',
+    price: '340,000 تومان',
+    oldPrice: '390,000 تومان',
+    description: 'دسترسی به جوایز ویژه فصل جدید و XP بوستر در Call of Duty Mobile.',
+    image: '/images/Gemini_Generated_Image_f08nbsf08nbsf08n.jpeg',
+  },
+  {
+    slug: 'rare-cod-account',
+    name: 'اکانت نایاب کالاف دیوتی',
+    price: '2,900,000 تومان',
+    oldPrice: '3,200,000 تومان',
+    description: 'اکانت با اسکین‌های لجندری، سطح بالا و امنیت کامل.',
+    image: '/images/Gemini_Generated_Image_f08nbsf08nbsf08n.jpeg',
+  },
+  {
+    slug: 'rare-cod-account',
+    name: 'اکانت نایاب کالاف دیوتی',
+    price: '2,900,000 تومان',
+    oldPrice: '3,200,000 تومان',
+    description: 'اکانت با اسکین‌های لجندری، سطح بالا و امنیت کامل.',
+    image: '/images/Gemini_Generated_Image_f08nbsf08nbsf08n.jpeg',
+  },
+    // ..
+]
+
 function Pupular() {
     return (
         // Main container with top margin and max-width container class
@@ -37,11 +81,11 @@ function Pupular() {
 
                 {/* Grid layout for popular items, responsive columns with spacing */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 space-y-4 md:space-y-0">
-                    <PupularItem />
-                    <PupularItem />
-                    <PupularItem />
-                    <PupularItem />
-                    <PupularItem />
+                    {
+                        products.map((product, index) => (
+                            <PupularItem key={index} product={product} />
+                        ))
+                    }
                 </div>
             </section>
         </div>

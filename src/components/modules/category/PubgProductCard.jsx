@@ -10,7 +10,7 @@ function PubgProductCard({ product }) {
                         transition duration-300 ease-in-out cursor-pointer">
 
             <div className="relative overflow-hidden rounded-2xl">
-                <Link href={`/pubg/${product.slug}`} className="block relative">
+                <Link href={`/category/pubg/${product.slug}`} className="block relative">
                     <img src="/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg" alt="اکانت کالاف دیوتی" className="w-full h-auto rounded-2xl object-cover 
                         transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
                         group-hover:scale-105" />

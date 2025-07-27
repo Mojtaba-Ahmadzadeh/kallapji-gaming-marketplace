@@ -35,7 +35,6 @@ const mockProducts = {
     },
 };
 
-
 function ProductDetails({ params }) {
     // Extract the slug parameter from props
     const { slug } = use(params)

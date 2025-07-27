@@ -9,7 +9,7 @@ function TelegramProductCard({ product }) {
                                 transition duration-300 ease-in-out cursor-pointer">
 
             <div className="relative overflow-hidden rounded-2xl">
-                <a href={`/telegram/${product.slug}`} className="block relative">
+                <a href={`/category/telegram/${product.slug}`} className="block relative">
                     <img src="/images/667d61112550730fade9c080_thumbnail.webp" alt="اکانت کالاف دیوتی" className="w-full h-auto rounded-2xl object-cover 
                                         transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
                                         group-hover:scale-105" />

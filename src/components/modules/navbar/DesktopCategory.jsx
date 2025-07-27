@@ -225,7 +225,7 @@ function DesktopCategory() {
                     {/* Example: PUBG */}
                     <li>
                         <Link
-                            href="/pubg"
+                            href="/category/pubg"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 transition"
                         >
                             <FontAwesomeIcon icon={faCrosshairs} className="text-yellow-400 w-4 h-4" />
@@ -234,14 +234,14 @@ function DesktopCategory() {
                     </li>
 
                     <li>
-                        <a href="/giftCard" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-pink-500 dark:hover:text-pink-400 transition">
+                        <a href="/category/giftcard" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-pink-500 dark:hover:text-pink-400 transition">
                             <FontAwesomeIcon icon={faGift} className="text-pink-400 w-4 h-4" />
                             <span>گیفت کارت</span>
                         </a>
                     </li>
                     <li>
                         <Link
-                            href="/telegram"
+                            href="/category/telegram"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white dark:hover:text-[#0088cc] hover:text-[#0088cc] transition group"
                         >
                             <FontAwesomeIcon
@@ -254,7 +254,7 @@ function DesktopCategory() {
 
                     <li>
                         <Link
-                            href="/callofduty"
+                            href="/category/callofduty"
                             className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-red-600 dark:hover:text-red-500 transition group"
                         >
                             <FontAwesomeIcon
@@ -266,7 +266,7 @@ function DesktopCategory() {
                     </li>
 
                     <li>
-                        <a href="/clashofclans" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition">
+                        <a href="/category/clashofclans" className="flex items-center gap-x-2 text-slate-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition">
                             <FontAwesomeIcon icon={faShieldHalved} className="text-red-500 w-4 h-4" />
                             <span>کلش آف کلنز</span>
                         </a>
