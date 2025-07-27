@@ -3,6 +3,25 @@ import FiltersAside from '@/components/modules/category/FilterAside'
 import PubgProductCard from '@/components/modules/category/PubgProductCard'
 import React, { useEffect } from 'react'
 
+const products = [
+  {
+    slug: 'vip-880cp-account',
+    title: 'اکانت ویژه 880CP کالاف دیوتی',
+    description: 'فعال‌سازی سریع + ضمانت اصالت',
+    price: 759000,
+    image: '/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg',
+  },
+  {
+    slug: 'legendary-1300cp',
+    title: 'اکانت لجندری 1300CP پابجی',
+    description: 'بدون بن دائم + تضمین سالم بودن',
+    price: 1150000,
+    image: '/images/sample2.jpg',
+  },
+  // ... سایر محصولات
+];
+
+
 function PubgProducts() {
 
     useEffect(() => {
@@ -56,7 +75,7 @@ function PubgProducts() {
                         </nav>
 
                         <div className="flex items-center gap-2 w-full sm:w-auto">
-                            <label htmlhtmlFor="sort" className="text-sm text-gray-700 dark:text-gray-300 whitespace-nowrap">مرتب‌سازی:</label>
+                            <label htmlFor="sort" className="text-sm text-gray-700 dark:text-gray-300 whitespace-nowrap">مرتب‌سازی:</label>
                             <div className="relative w-full sm:w-52">
                                 <select id="sort" className="appearance-none w-full 
                             bg-gray-100 dark:bg-[#1e293b] 
@@ -79,12 +98,11 @@ function PubgProducts() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-3 gap-3">
-                    <PubgProductCard/>
-                    <PubgProductCard/>
-                    <PubgProductCard/>
-                    <PubgProductCard/>
-                    <PubgProductCard/>
-                    <PubgProductCard/>
+                    {
+                        products.map((product, index)=> (
+                            <PubgProductCard key={index} product={product}/>
+                        ))
+                    }
                 </div>
             </div>
         </section>

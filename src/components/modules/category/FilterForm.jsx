@@ -10,13 +10,15 @@ function FilterForm() {
             <form className="space-y-6" action="#" method="GET">
                 {/* search */}
                 <div>
-                    <label htmlhtmlFor="search" className="block mb-1 text-gray-700 dark:text-gray-300 text-sm font-medium">جستجو</label>
+                    <label htmlFor="search" className="block mb-1 text-gray-700 dark:text-gray-300 text-sm font-medium">
+                        جستجو
+                    </label>
                     <input type="text" id="search" name="search" placeholder="جستجوی اکانت یا تجهیزات" className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-[#2A2F4A] text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" />
                 </div>
 
                 {/* category */}
                 <div>
-                    <label htmlhtmlFor="category" className="block mb-1 text-gray-700 dark:text-gray-300 text-sm font-medium">دسته‌بندی</label>
+                    <label htmlFor="category" className="block mb-1 text-gray-700 dark:text-gray-300 text-sm font-medium">دسته‌بندی</label>
                     <select id="category" name="category" className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-[#2A2F4A] text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
                         <option value="">همه</option>
                         <option value="accounts">اکانت‌ها</option>

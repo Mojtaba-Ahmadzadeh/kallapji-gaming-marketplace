@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-function PubgProductCard() {
+function PubgProductCard({ product }) {
     return (
         <div className="group w-full p-4 rounded-3xl 
                         bg-white dark:bg-gradient-to-br dark:from-[#1b223c] dark:via-[#131a2f] dark:to-[#0e111d] 
@@ -9,14 +10,14 @@ function PubgProductCard() {
                         transition duration-300 ease-in-out cursor-pointer">
 
             <div className="relative overflow-hidden rounded-2xl">
-                <a href="/pages/gameAccountDetails.html" className="block relative">
+                <Link href={`/pubg/${product.slug}`} className="block relative">
                     <img src="/images/Gemini_Generated_Image_jd2makjd2makjd2m.jpeg" alt="اکانت کالاف دیوتی" className="w-full h-auto rounded-2xl object-cover 
                         transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
                         group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 
                         transition-colors duration-500 rounded-2xl">
                     </div>
-                </a>
+                </Link>
 
                 <div className="absolute top-1/2 left-3 -translate-y-1/2 flex flex-col gap-2 
                     opacity-0 group-hover:opacity-100 
