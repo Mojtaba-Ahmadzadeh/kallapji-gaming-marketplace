@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TelegramProductCard() {
+function TelegramProductCard({ product }) {
     return (
         <div className="group w-full p-4 rounded-3xl 
                                 bg-white dark:bg-gradient-to-br dark:from-[#1b223c] dark:via-[#131a2f] dark:to-[#0e111d] 
@@ -9,7 +9,7 @@ function TelegramProductCard() {
                                 transition duration-300 ease-in-out cursor-pointer">
 
             <div className="relative overflow-hidden rounded-2xl">
-                <a href="/pages/gameAccountDetails.html" className="block relative">
+                <a href={`/telegram/${product.slug}`} className="block relative">
                     <img src="/images/667d61112550730fade9c080_thumbnail.webp" alt="اکانت کالاف دیوتی" className="w-full h-auto rounded-2xl object-cover 
                                         transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
                                         group-hover:scale-105" />

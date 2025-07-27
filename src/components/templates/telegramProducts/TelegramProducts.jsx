@@ -3,6 +3,38 @@ import FiltersAside from '@/components/modules/category/FilterAside'
 import TelegramProductCard from '@/components/modules/category/TelegramProductCard'
 import React, { useEffect } from 'react'
 
+const products = [
+    {
+        slug: 'telegram-premium-1month',
+        title: 'اشتراک پریمیوم 1 ماهه تلگرام',
+        description: 'فعال‌سازی فوری روی آیدی یا شماره + بدون نیاز به رمز',
+        price: 180000,
+        image: '/images/667d61112550730fade9c080_thumbnail.webp',
+    },
+    {
+        slug: 'telegram-premium-3month',
+        title: 'اشتراک پریمیوم 3 ماهه تلگرام',
+        description: 'صرفه‌جویی بیشتر + پشتیبانی تا پایان دوره',
+        price: 520000,
+        image: '/images/667d61112550730fade9c080_thumbnail.webp',
+    },
+    {
+        slug: 'telegram-premium-6month',
+        title: 'اشتراک پریمیوم 6 ماهه تلگرام',
+        description: 'ارسال سریع + ضمانت فعال بودن کامل ویژگی‌ها',
+        price: 1000000,
+        image: '/images/667d61112550730fade9c080_thumbnail.webp',
+    },
+    {
+        slug: 'telegram-premium-12month',
+        title: 'اشتراک پریمیوم 12 ماهه تلگرام',
+        description: 'مقرون‌به‌صرفه‌ترین گزینه با پشتیبانی یک‌ساله',
+        price: 1850000,
+        image: '/images/667d61112550730fade9c080_thumbnail.webp',
+    },
+];
+
+
 function TelegramProducts() {
 
     useEffect(() => {
@@ -79,12 +111,11 @@ function TelegramProducts() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-3 gap-3">
-                    <TelegramProductCard/>
-                    <TelegramProductCard/>
-                    <TelegramProductCard/>
-                    <TelegramProductCard/>
-                    <TelegramProductCard/>
-                    <TelegramProductCard/>
+                    {
+                        products.map((product, index)=> (
+                            <TelegramProductCard key={index} product={product}/>
+                        ))
+                    }
                 </div>
             </div>
         </section>

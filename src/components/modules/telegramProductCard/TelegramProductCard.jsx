@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TelegramProductCard() {
+function TelegramProductCard({product}) {
     return (
         <div className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white rounded-2xl shadow-lg p-6 
                         border border-zinc-200 dark:border-zinc-700 transition-all group">
