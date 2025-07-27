@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { notFound } from 'next/navigation';
 import CommentsSection from '@/components/modules/commentsSection/CommentsSection';
 
@@ -23,10 +23,10 @@ const mockProducts = {
 };
 
 function ProductDetails({ params }) {
-    // Destructure the slug param from Next.js dynamic routing params
-    const { slug } = params;
 
     // Get the product details from mock data
+    const { slug } = use(params); // ✅ باز کردن Promise
+
     const product = mockProducts[slug];
 
     // Local state to manage quantity of the product

@@ -1,7 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useParams, useRouter } from 'next/navigation'
+import Link from 'next/link'
 import {
   faChevronLeft, faGamepad, faBullhorn, faStore, faUser, faEye,
   faHeart, faCogs, faSignInAlt, faUserCircle, faShoppingCart,
@@ -9,6 +11,7 @@ import {
   faSkullCrossbones, faArrowRight, faUserSecret
 } from '@fortawesome/free-solid-svg-icons'
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
+import { allProducts } from '@/data/products'
 
 // Menu configuration object
 const menuData = {
@@ -63,10 +66,67 @@ const menuData = {
 }
 
 export default function MobileSidebar({ isOpen, onClose }) {
+
+  const pathname = useParams()
+
+  useEffect(() => {
+    if (isOpen) {
+      onClose()
+    }
+  }, [pathname])
+
   const [activeMenu, setActiveMenu] = useState('main')
 
   const handleBack = () => setActiveMenu('main')
   const currentMenu = menuData[activeMenu] || []
+
+  const [query, setQuery] = useState('')                  // User input query
+  const [filteredResults, setFilteredResults] = useState([]) // Filtered product list
+  const [showResults, setShowResults] = useState(false)     // Dropdown visibility
+  const router = useRouter()
+  const containerRef = useRef(null)
+
+  // Filter products on query change, debounced or immediate for simplicity
+  useEffect(() => {
+    if (!query.trim()) {
+      setFilteredResults([])
+      return
+    }
+
+    // Filter products whose title includes the query (case-insensitive)
+    const results = allProducts.filter(product =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    )
+
+    // Remove duplicates by slug
+    const uniqueResults = results.filter(
+      (item, index, self) => index === self.findIndex(t => t.slug === item.slug)
+    )
+
+    setFilteredResults(uniqueResults)
+  }, [query])
+
+  // Close dropdown if clicked outside search bar
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setShowResults(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  // Handle form submission: redirect to the first matched product page
+  const handleSubmit = e => {
+    e.preventDefault()
+    if (filteredResults.length > 0) {
+      setQuery('')
+      router.push(`/${filteredResults[0].game}/${filteredResults[0].slug}`)
+      setShowResults(false)
+    }
+  }
 
   return (
     <>
@@ -89,19 +149,52 @@ export default function MobileSidebar({ isOpen, onClose }) {
         `}
       >
         {/* Search bar */}
-        <div className="flex items-center w-full h-16 rounded-[1.7rem] mb-5 bg-white dark:bg-[#1b2138] px-6 shadow-lg shadow-gray-300 dark:shadow-[#111827]/60 transition-all">
-          <form className="flex items-center w-full relative">
+        <div ref={containerRef} className="flex items-center w-full h-16 rounded-[1.7rem] mb-5 bg-white dark:bg-[#1b2138] px-6 shadow-lg shadow-gray-300 dark:shadow-[#111827]/60 transition-all">
+          <form onSubmit={handleSubmit} className="flex items-center w-full relative">
             <input
               type="text"
+              value={query}
+              onChange={e => {
+                setQuery(e.target.value)
+                setShowResults(true)
+              }}
+              aria-label="Search products"
+              autoComplete="off"
               placeholder="دنبال چه محصولی می‌گردی؟"
               className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 font-Shabnam-Bold-FD text-base outline-none px-5 h-full rounded-[1.2rem]"
             />
-            <button type="submit" className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-600 dark:text-white hover:text-blue-500">
+            <button aria-label="Submit search" type="submit" className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-600 dark:text-white hover:text-blue-500">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.2-5.2m0 0A7.5 7.5 0 105.2 5.2a7.5 7.5 0 0010.6 10.6z" />
               </svg>
             </button>
           </form>
+          {/* Dropdown for live search suggestions */}
+          {showResults && query.length > 0 && (
+            <div className="absolute top-16 left-0 right-0 w-full rounded-t-[1.3rem] bg-white dark:bg-[#1f2937] shadow-lg z-50 rounded-b-[1.3rem] max-h-72 overflow-auto">
+              {filteredResults.length > 0 ? (
+                filteredResults.map(product => (
+                  <Link
+                    key={product.slug}
+                    href={`/${product.game}/${product.slug}`}
+                    className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                    onClick={() => {
+                      setShowResults(false)
+                      setQuery('')       // پاک کردن ورودی هنگام کلیک روی لینک
+                    }}
+                    tabIndex={0}
+
+                  >
+                    <span className="text-sm text-black dark:text-white">{product.title}</span>
+                  </Link>
+                ))
+              ) : (
+                <div className="px-4 py-3 text-sm text-gray-500 dark:text-gray-300">
+                  محصول یا اکانت مورد نظر یافت نشد.
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Menu items */}
