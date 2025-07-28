@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-function ClashProductCard() {
+function ClashProductCard({product}) {
     return (
         // Card container with shadow, rounded corners and hover effect
         <div className="w-full h-[337px] bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
@@ -9,13 +10,13 @@ function ClashProductCard() {
             <div className="relative h-[60%] overflow-hidden">
                 
                 {/* Link wrapping the image */}
-                <a href="/pages/pubgUcِDetails.html" className="block overflow-hidden rounded-2xl shadow-lg">
+                <Link href={`/clashofclans/${product.slug}`} className="block overflow-hidden rounded-2xl shadow-lg">
                     <img 
-                        src="../images/Gemini_Generated_Image_rp0wemrp0wemrp0w.jpeg" 
+                        src="../images/Gemini_Generated_Image_1fogf71fogf71fog.png" 
                         className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
                         alt="یوسی پابجی 3850 عددی" 
                     />
-                </a>
+                </Link>
                 
                 {/* Badge positioned at the top-right corner */}
                 <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">

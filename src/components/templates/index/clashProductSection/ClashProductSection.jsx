@@ -1,6 +1,38 @@
 import React from 'react';
 import ClashProductCard from '@/components/modules/clashProductCard/ClashProductCard';
 
+const products = [
+    {
+        slug: 'th15-max-hero-skin',
+        title: 'اکانت تاون هال 15 مکس + اسکین هیرو',
+        description: 'همراه با اسکین ویژه هیروها + تضمین بدون بن',
+        price: 1950000,
+        image: '/images/Gemini_Generated_Image_1fogf71fogf71fog.png',
+    },
+    {
+        slug: 'th14-strong-clan-war',
+        title: 'اکانت تاون هال 14 قوی برای کلن وار',
+        description: 'مناسب کلن وار حرفه‌ای + ارتقای هیروها و نیروها',
+        price: 1490000,
+        image: '/images/clash_th14_war.jpg',
+    },
+    {
+        slug: 'th13-balanced-upgrade',
+        title: 'اکانت تاون هال 13 بالانس',
+        description: 'ساختمان‌ها و نیروها متعادل + آماده ارتقا به TH14',
+        price: 1090000,
+        image: '/images/Gemini_Generated_Image_1fogf71fogf71fog.jpg',
+    },
+    {
+        slug: 'th11-economic-choice',
+        title: 'اکانت تاون هال 11 اقتصادی',
+        description: 'قیمت مناسب + بدون هیچ تخلف یا بن',
+        price: 720000,
+        image: '/images/Gemini_Generated_Image_1fogf71fogf71fog.jpg',
+    },
+];
+
+
 function ClashProductSection() {
     return (
         <div className="mt-16">
@@ -44,10 +76,11 @@ function ClashProductSection() {
             {/* Product Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {/* Product Cards */}
-                <ClashProductCard />
-                <ClashProductCard />
-                <ClashProductCard />
-                <ClashProductCard />
+                {
+                    products.map((product, index) => (
+                        <ClashProductCard key={index} product={product} />
+                    ))
+                }
             </div>
         </div>
     );
