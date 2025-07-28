@@ -5,10 +5,11 @@ import { notFound } from "next/navigation";
 import CommentsSection from "@/components/modules/commentsSection/CommentsSection";
 
 const mockSelectedAccounts = {
-  "vip-880cp-account-880": {
+  "cod-880cp-account-1": {
     name: "اکانت لجندری پابجی",
     price: "3,200,000 تومان",
     oldPrice: "3,500,000 تومان",
+    title: " اکانت کالاف دیوتی لجندری",
     description: "اکانتی خاص با اسکین‌های نایاب، سطح بالا و امنیت کامل.",
     images: [
       "/images/Gemini_Generated_Image_hr5zhxhr5zhxhr5z.jpeg",
@@ -52,7 +53,13 @@ function ProductDetails({ params }) {
   const totalPrice = basePrice + taxAmount;
 
   return (
-    <main className="container max-w-screen-2xl mt-16 px-4 mb-5">
+    <main className="container max-w-screen-2xl mt-16 mb-5">
+      <div class="mb-8">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white leading-relaxed">
+          {product.title}
+        </h1>
+
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
         <div className="lg:col-span-2 bg-white dark:bg-zinc-900 p-5 sm:p-6 rounded-3xl border border-gray-200 dark:border-zinc-700 shadow-xl">
 

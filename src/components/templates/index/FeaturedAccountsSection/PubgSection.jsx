@@ -1,51 +1,53 @@
 import React from 'react';
-import CODProductSlide from '@/components/modules/gameProductSlides/CODProductSlide';
+import PUBGProductSlide from '@/components/modules/gameProductSlides/PUBGProductSlide';
 
 // Sample product list for PUBG section (currently using Call of Duty products as placeholder)
 const products = [
     {
         id: 1,
         title: '۸۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۷۵۹,۰۰۰',
     },
     {
         id: 2,
         title: '۵۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۵۵۹,۰۰۰',
     },
     {
         id: 3,
         title: '۵۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۵۵۹,۰۰۰',
     },
     {
         id: 4,
         title: '۵۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۵۵۹,۰۰۰',
     },
     {
         id: 5,
         title: '۵۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۵۵۹,۰۰۰',
     },
     {
         id: 6,
         title: '۵۸۰ سی پی کالاف دیوتی',
+        slug: 'pubg-royalpass-max-tier',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۵۵۹,۰۰۰',
     },
-    {
-        id: 7,
-        title: '۵۸۰ سی پی کالاف دیوتی',
-        image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
-        price: '۵۵۹,۰۰۰',
-    },
+    // ...
 ];
+
 
 function PubgSection() {
     return (
@@ -60,7 +62,7 @@ function PubgSection() {
             </div>
 
             {/* Product slide component displaying PUBG products */}
-            <CODProductSlide products={products} />
+            <PUBGProductSlide products={products} />
         </>
     );
 }

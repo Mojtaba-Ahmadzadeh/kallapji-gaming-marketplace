@@ -6,9 +6,10 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 // CODProductSlide component receives an array of product objects and displays them in a Swiper carousel
-function CODProductSlide({ products }) {
+function PUBGProductSlide({ products }) {
     return (
         // Outer container with responsive padding and spacing
         <div className="w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -37,12 +38,14 @@ function CODProductSlide({ products }) {
                                 aria-label={`اسلاید ${product.id}`} // Accessible label in Persian
                                 className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-5 shadow-md hover:shadow-yellow-500/30 transition duration-300"
                             >
+                                <Link href={`/popular-accounts/pubg/${product.slug}`}>
                                 {/* Product image */}
                                 <img
                                     src={product.image}
                                     className="rounded-xl w-full h-44 object-cover mb-4"
                                     alt={product.title}
                                 />
+                                </Link>
 
                                 {/* Product title */}
                                 <h3 className="text-gray-800 dark:text-white font-semibold text-lg mb-1">
@@ -75,4 +78,4 @@ function CODProductSlide({ products }) {
     );
 }
 
-export default CODProductSlide;
+export default PUBGProductSlide;

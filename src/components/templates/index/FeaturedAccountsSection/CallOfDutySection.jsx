@@ -6,7 +6,7 @@ import CODProductSlide from '@/components/modules/gameProductSlides/CODProductSl
 const products = [
   {
     id: 1,
-    slug: 'vip-880cp-account-880',
+    slug: 'cod-880cp-account-1',
     title: '۸۸۰ سی پی کالاف دیوتی',
     image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
     price: '۷۵۹,۰۰۰',
