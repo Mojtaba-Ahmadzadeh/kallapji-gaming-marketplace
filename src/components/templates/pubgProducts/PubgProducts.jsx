@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 
 const products = [
   {
-    slug: 'pubg-uc-660',
+    slug: 'vip-880cp-account',
     title: 'اکانت ویژه 880CP کالاف دیوتی',
     description: 'فعال‌سازی سریع + ضمانت اصالت',
     price: 759000,

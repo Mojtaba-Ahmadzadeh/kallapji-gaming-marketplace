@@ -11,14 +11,14 @@ import Link from 'next/link';
 const products = [
     {
         id: 1,
-        slug: 'vip-880cp-account',
+        slug: 'vip-880cp-account-880',
         title: '۸۸۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۷۵۹,۰۰۰',
     },
     {
         id: 2,
-        slug: 'vip-1300cp-account',
+        slug: 'vip-2400cp-account',
         title: '۱۳۰۰ سی پی کالاف دیوتی',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
         price: '۱,۰۵۰,۰۰۰',

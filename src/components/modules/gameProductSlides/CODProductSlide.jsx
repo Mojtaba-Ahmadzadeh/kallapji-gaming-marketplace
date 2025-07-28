@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 // Component to render a product slider for Call of Duty products
 function CODProductSlide({ products }) {
@@ -38,11 +39,13 @@ function CODProductSlide({ products }) {
                                 className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-5 shadow-md hover:shadow-yellow-500/30 transition duration-300"
                             >
                                 {/* Product image */}
-                                <img
-                                    src={product.image}
-                                    className="rounded-xl w-full h-44 object-cover mb-4"
-                                    alt={product.title}
-                                />
+                                <Link href={`/popular-accounts/callofduty/${product.slug}`}>
+                                    <img
+                                        src={product.image}
+                                        className="rounded-xl w-full h-44 object-cover mb-4"
+                                        alt={product.title}
+                                    />
+                                </Link>
 
                                 {/* Product title */}
                                 <h3 className="text-gray-800 dark:text-white font-semibold text-lg mb-1">

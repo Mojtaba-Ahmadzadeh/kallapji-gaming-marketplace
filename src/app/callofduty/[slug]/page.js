@@ -12,7 +12,7 @@ const mockProducts = {
         description: 'مناسب برای خرید آیتم‌ها، اسکین‌ها و Battle Pass در بازی Call of Duty Mobile.',
         image: '/images/Gemini_Generated_Image_t9ezxat9ezxat9ez.jpeg',
     },
-    'vip-1300cp-account': {
+    'vip-2400cp-account': {
         name: 'CP 1300 کالاف دیوتی',
         price: '1,150,000 تومان',
         oldPrice: '1,220,000 تومان',
